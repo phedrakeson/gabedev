@@ -1,0 +1,158 @@
+:root {
+  --var-main-color: #eee;
+  --var-aux-color: #a6a6a6;
+  --var-main-contrast-color: #1a1a1a;
+  --var-aux-contrast-color: #2e3131;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  background-color: var(--var-main-contrast-color);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+
+  justify-content: space-between;
+}
+
+.nav a {
+  font-family: 'Manrope', sans-serif;
+  color: var(--var-main-color);
+  font-size: 1.25em;
+  font-weight: 300;
+}
+
+.nav ul {
+  display: flex;
+}
+
+.nav li:last-child {
+  margin: 20px 60px 0 0;
+}
+
+.nav li::before {
+  content: '';
+  border-left: 1px solid var(--var-aux-contrast-color);
+  margin: 0 10px 0 10px;
+}
+
+.switcher {
+  display: flex;
+}
+
+.header .switch-white {
+  border-radius: 50%;
+  border: 1px solid var(--var-aux-color);
+
+  width: 20px;
+  height: 20px;
+  margin: 20px 0 0 60px;
+
+  cursor: pointer;
+}
+
+.header .switch-black {
+  border-radius: 50%;
+  background-color: var(--var-aux-color);
+
+  width: 20px;
+  height: 20px;
+  margin: 20px 0 0 5px;
+
+  cursor: pointer;
+}
+
+.main h1,
+h2 {
+  color: var(--var-main-color);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 200;
+  font-size: 7.5em;
+  line-height: 0;
+}
+
+.main h1:nth-child(1) {
+  margin: 100px 0 0 300px;
+}
+
+.main h1:nth-child(2) {
+  margin: 100px 0 0 388px;
+  font-size: 6.25em;
+}
+
+.main h2 {
+  color: var(--var-aux-color);
+}
+
+.main h2:nth-child(1) {
+  margin: 150px 0 0 300px;
+}
+
+.main h2:nth-child(2) {
+  margin: 130px 0 0 300px;
+  font-size: 6.25em;
+}
+
+.main .main-line {
+  position: absolute;
+  width: 1px;
+  height: 500px;
+  margin: -60px 0 0 250px;
+
+  background: var(--var-aux-contrast-color);
+}
+
+@media (max-width: 500px) {
+  .header .switch-white {
+    margin: 20px 0 0 20px;
+  }
+
+  .nav li:last-child {
+    margin: 20px 20px 0 0;
+  }
+
+  .main .main-line {
+    height: 1px;
+    width: 200px;
+    margin: 100px 0 0 120px;
+  }
+
+  .main h1:nth-child(1),
+  .main h1:nth-child(2),
+  .main h2:nth-child(1),
+  .main h2:nth-child(2) {
+    margin: 0px;
+    font-size: 2em;
+  }
+
+  .main h1:nth-child(1) {
+    margin: 60px 0 0 65px;
+    font-size: 4.375em;
+  }
+
+  .main h1:nth-child(2) {
+    margin: 60px 0 0 120px;
+    font-size: 2.25em;
+  }
+
+  .main h2:nth-child(1) {
+    margin: 80px 0 0 60px;
+    font-size: 3em;
+  }
+
+  .main h2:nth-child(2) {
+    margin: 60px 0 0 60px;
+    font-size: 2.25em;
+  }
+}
