@@ -190,3 +190,26 @@ h2 {
     font-size: 2em;
   }
 }
+
+@media only screen and (max-width: 350px) {
+  .line {
+    left: 30px;
+  }
+
+  .container-content:nth-child(1) h1:nth-child(1) {
+    font-size: 2.5em;
+  }
+
+  .container-content:nth-child(1) h1:nth-child(2) {
+    font-size: 1.5em;
+    left: 30px;
+  }
+
+  .container-content:nth-child(2) h2:nth-child(1) {
+    font-size: 1.5em;
+  }
+
+  .container-content:nth-child(2) h2:nth-child(2) {
+    font-size: 1.5em;
+  }
+}
