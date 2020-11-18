@@ -170,7 +170,7 @@ h2 {
 
 @media only screen and (max-width: 500px) {
   .line {
-    left: 60px;
+    left: 30px;
   }
 
   .container-content:nth-child(1) h1:nth-child(1) {
