@@ -16,100 +16,87 @@
 
 body {
   background-color: var(--var-main-contrast-color);
-  font-family: 'Manrope', sans-serif;
-  position: relative;
 }
 
-h1,
-h2 {
-  color: var(--var-main-color);
-  font-weight: 200;
-  line-height: 0.9;
-}
-
-h2 {
-  color: var(--var-aux-color);
-}
-
-.line {
-  width: 1px;
-  height: 400px;
-  background: var(--var-aux-contrast-color);
-  position: absolute;
-  left: 170px;
-  top: 170px;
+img {
+  display: block;
 }
 
 .header {
-  height: 60px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 60px;
+  margin: 20px 60px 0 60px;
 }
 
-.header .switch {
+.nav ul {
   display: flex;
-  gap: 5px;
+  gap: 15px;
 }
 
-.header .switch div {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  cursor: pointer;
-
-  border: 1px solid var(--var-aux-color);
+.nav li img {
+  width: 30px;
+  height: 30px;
+  opacity: 0.1;
+  transition: 0.5s ease-in;
 }
 
-.switch-on {
-  background-color: var(--var-aux-color);
-  border: none;
+.nav li img:hover {
+  opacity: 1;
 }
 
-.nav a {
+h1 {
+  color: var(--var-main-color);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 200;
+  line-height: 1;
+}
+
+h2 {
   color: var(--var-aux-color);
-  font-size: 1.25em;
-  font-weight: 300;
-  padding-left: 10px;
-  border-left: 1px solid var(--var-aux-contrast-color);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 200;
+  line-height: 1;
+}
+
+p,
+span,
+.quote {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 200;
+  line-height: 1;
+  color: var(--var-aux-color);
 }
 
 .main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 1px;
+  margin: 100px 300px 60px 160px;
+  border-right: 1px solid var(--var-aux-contrast-color);
+  animation: show 3s forwards;
 }
 
-.container-content {
-  position: relative;
-  margin-top: 100px;
-  animation: show 2s forwards;
+.main h1:nth-child(1) {
+  font-size: 6em;
+}
+.main h1:nth-child(2) {
+  font-size: 4.5em;
+  padding-left: 70px;
+  margin-bottom: 30px;
 }
 
-.container-content:nth-child(2) {
+.main h2 {
+  font-size: 4.5em;
+}
+
+.call-to-action {
+  margin-left: 65px;
   margin-top: 60px;
 }
 
-.container-content:nth-child(1) h1:nth-child(1) {
-  font-size: 7.5em;
-}
-
-.container-content:nth-child(1) h1:nth-child(2) {
-  font-size: 6.25em;
-  position: relative;
-  left: 85px;
-}
-
-.container-content:nth-child(2) h2:nth-child(1) {
-  font-size: 7.5em;
-}
-
-.container-content:nth-child(2) h2:nth-child(2) {
-  font-size: 5.6em;
-  margin-top: 30px;
+.call-to-action a {
+  font-size: 2.25em;
+  color: var(--var-main-color);
+  font-weight: 200;
+  line-height: 1;
+  font-family: 'Manrope', sans-serif;
 }
 
 @keyframes show {
@@ -123,93 +110,127 @@ h2 {
   }
 }
 
-@media only screen and (max-width: 1200px) {
-  .line {
-    left: 100px;
-  }
-
-  .container-content:nth-child(1) h1:nth-child(1) {
-    font-size: 7.5em;
-  }
-
-  .container-content:nth-child(1) h1:nth-child(2) {
-    font-size: 6em;
-  }
-
-  .container-content:nth-child(2) h2:nth-child(1) {
-    font-size: 5.25em;
-  }
-
-  .container-content:nth-child(2) h2:nth-child(2) {
-    font-size: 5.25em;
-  }
+.line {
+  margin: 0 auto;
+  background: var(--var-aux-contrast-color);
+  width: 1px;
+  height: 60px;
 }
 
-@media only screen and (max-width: 950px) {
-  .line {
-    left: 60px;
-  }
+.about {
+  text-align: center;
+  margin-top: 60px;
+  padding-bottom: 60px;
+}
 
-  .container-content:nth-child(1) h1:nth-child(1) {
-    font-size: 5.5em;
-  }
+.about p {
+  font-size: 3em;
+  margin: 30px 0 30px 0;
+  color: var(--var-main-color);
+}
 
-  .container-content:nth-child(1) h1:nth-child(2) {
-    font-size: 4em;
-    left: 65px;
-  }
+.about span {
+  font-size: 2.5em;
+}
 
-  .container-content:nth-child(2) h2:nth-child(1) {
+.quote {
+  margin-top: 90px;
+  font-size: 2.5em;
+}
+
+@media only screen and (max-width: 1025px) {
+  .main {
+    margin: 60px;
+  }
+  .main h1:nth-child(1) {
+    font-size: 5em;
+  }
+  .main h1:nth-child(2) {
     font-size: 3.5em;
   }
 
-  .container-content:nth-child(2) h2:nth-child(2) {
+  .main h2 {
+    font-size: 3.5em;
+  }
+
+  .call-to-action a {
     font-size: 3.5em;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  .line {
-    left: 30px;
+  .header {
+    margin: 10px 20px 0 20px;
   }
 
-  .container-content:nth-child(1) h1:nth-child(1) {
+  .main {
+    margin: 40px 20px 40px 20px;
+  }
+  .main h1:nth-child(1) {
     font-size: 3em;
   }
-
-  .container-content:nth-child(1) h1:nth-child(2) {
-    font-size: 2em;
-    left: 35px;
+  .main h1:nth-child(2) {
+    font-size: 2.5em;
+    padding-left: 35px;
   }
 
-  .container-content:nth-child(2) h2:nth-child(1) {
-    font-size: 2em;
+  .main h2 {
+    font-size: 1.75em;
+    margin-bottom: 10px;
   }
 
-  .container-content:nth-child(2) h2:nth-child(2) {
-    font-size: 2em;
+  .call-to-action {
+    margin-left: 35px;
+  }
+
+  .call-to-action a {
+    font-size: 1.75em;
+  }
+
+  .about p {
+    font-size: 1.75em;
+  }
+
+  .about span {
+    font-size: 1.25em;
+  }
+
+  .quote {
+    font-size: 1.25em;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  .line {
-    left: 30px;
+  .main h1:nth-child(1) {
+    font-size: 2em;
   }
-
-  .container-content:nth-child(1) h1:nth-child(1) {
-    font-size: 2.5em;
-  }
-
-  .container-content:nth-child(1) h1:nth-child(2) {
+  .main h1:nth-child(2) {
     font-size: 1.5em;
-    left: 30px;
+    padding-left: 23px;
   }
 
-  .container-content:nth-child(2) h2:nth-child(1) {
-    font-size: 1.5em;
+  .main h2 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
   }
 
-  .container-content:nth-child(2) h2:nth-child(2) {
-    font-size: 1.5em;
+  .call-to-action {
+    margin-left: 23px;
+  }
+
+  .call-to-action a {
+    font-size: 1.25em;
+  }
+
+  .about p {
+    font-size: 1.25em;
+  }
+
+  .about span {
+    font-size: 1em;
+  }
+
+  .quote {
+    font-size: 1em;
   }
 }
