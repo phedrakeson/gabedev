@@ -138,7 +138,7 @@ span,
   font-size: 2.5em;
 }
 
-@media only screen and (max-width: 1025px) {
+@media only screen and (max-width: 1200px) {
   .main {
     margin: 60px;
   }
