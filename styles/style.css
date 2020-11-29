@@ -73,7 +73,7 @@ h2 {
 
 p,
 span,
-.quote {
+a {
   font-family: 'Manrope', sans-serif;
   font-weight: 200;
   line-height: 1;
@@ -154,6 +154,66 @@ span,
   font-size: 2.5em;
 }
 
+#items-wrapper {
+  margin: 0 auto 60px auto;
+  width: 50vw;
+  text-align: center;
+  border-top: 1px solid var(--var-aux-contrast-color);
+}
+
+#items-wrapper h1 {
+  margin: 60px 0 30px 0;
+  font-size: 3em;
+}
+
+#items-wrapper a {
+  padding: 20px;
+  width: 200px;
+  font-size: 1.25em;
+  color: var(--var-main-color);
+  border: none;
+  background: var(--var-aux-contrast-color);
+  outline: none;
+  margin-top: 30px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#items {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.item {
+  flex: none;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: start;
+  pointer-events: none;
+}
+
+#items-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#items::-webkit-scrollbar {
+  height: 5px;
+}
+
+#items::-webkit-scrollbar-thumb {
+  background: var(--var-aux-color);
+  border-radius: 2.5px;
+}
+
+#items::-webkit-scrollbar-track {
+  background-color: var(--var-aux-contrast-color);
+}
+
 @media only screen and (max-width: 1200px) {
   .main {
     margin: 60px;
@@ -203,16 +263,20 @@ span,
     font-size: 1.75em;
   }
 
+  .about {
+    margin: 60px 0 0 20px;
+  }
+
   .about p {
-    font-size: 1.75em;
+    font-size: 1.5em;
   }
 
-  .about span {
-    font-size: 1.25em;
+  #items-wrapper {
+    width: 90vw;
   }
 
-  .quote {
-    font-size: 1.25em;
+  #items-wrapper h1 {
+    font-size: 2em;
   }
 }
 
@@ -239,54 +303,10 @@ span,
   }
 
   .about p {
-    font-size: 1.25em;
-  }
-
-  .about span {
     font-size: 1em;
   }
 
-  .quote {
-    font-size: 1em;
+  #items-wrapper {
+    width: 90vw;
   }
-}
-
-#items-wrapper {
-  margin: 0 auto 60px auto;
-  width: 50vw;
-}
-
-#items {
-  display: flex;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scroll-behavior: smooth;
-}
-
-.item {
-  flex: none;
-  width: 100%;
-  height: 400px;
-  scroll-snap-align: start;
-  pointer-events: none;
-}
-
-#items-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-#items::-webkit-scrollbar {
-  height: 5px;
-}
-
-#items::-webkit-scrollbar-thumb {
-  background: var(--var-aux-color);
-  border-radius: 2.5px;
-}
-
-#items::-webkit-scrollbar-track {
-  background-color: var(--var-aux-contrast-color);
 }
