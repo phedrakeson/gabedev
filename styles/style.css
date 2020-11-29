@@ -91,12 +91,20 @@ span,
   margin-top: 60px;
 }
 
+.call-to-action:hover {
+  transform: translate3d(10px, 0, 0);
+  transition: linear 1.5s;
+}
+
 .call-to-action a {
   font-size: 2.25em;
   color: var(--var-main-color);
   font-weight: 200;
   line-height: 1;
   font-family: 'Manrope', sans-serif;
+}
+
+@keyframes transition {
 }
 
 @keyframes show {
