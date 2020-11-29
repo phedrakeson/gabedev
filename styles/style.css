@@ -18,6 +18,19 @@ body {
   background-color: var(--var-main-contrast-color);
 }
 
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--var-aux-color);
+  border-radius: 2.5px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: var(--var-aux-contrast-color);
+}
+
 img {
   display: block;
 }
@@ -102,9 +115,6 @@ span,
   font-weight: 200;
   line-height: 1;
   font-family: 'Manrope', sans-serif;
-}
-
-@keyframes transition {
 }
 
 @keyframes show {
@@ -239,4 +249,44 @@ span,
   .quote {
     font-size: 1em;
   }
+}
+
+#items-wrapper {
+  margin: 0 auto 60px auto;
+  width: 50vw;
+}
+
+#items {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.item {
+  flex: none;
+  width: 100%;
+  height: 400px;
+  scroll-snap-align: start;
+  pointer-events: none;
+}
+
+#items-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#items::-webkit-scrollbar {
+  height: 5px;
+}
+
+#items::-webkit-scrollbar-thumb {
+  background: var(--var-aux-color);
+  border-radius: 2.5px;
+}
+
+#items::-webkit-scrollbar-track {
+  background-color: var(--var-aux-contrast-color);
 }
