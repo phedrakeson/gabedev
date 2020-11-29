@@ -131,8 +131,8 @@ a {
 .line {
   margin: 0 auto;
   background: var(--var-aux-contrast-color);
-  width: 1px;
-  height: 60px;
+  width: 50vw;
+  height: 1px;
 }
 
 .about {
