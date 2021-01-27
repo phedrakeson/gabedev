@@ -83,8 +83,7 @@ a {
 }
 
 .main {
-  margin: 100px 300px 60px 160px;
-  border-right: 1px solid var(--var-aux-contrast-color);
+  margin: 100px 300px 100px 160px;
   animation: show 3s forwards;
 }
 
@@ -128,13 +127,6 @@ a {
     opacity: 1;
     transform: translate3d(0px, 0, 0);
   }
-}
-
-.line {
-  margin: 0 auto;
-  background: var(--var-aux-contrast-color);
-  width: 50vw;
-  height: 1px;
 }
 
 .about {
